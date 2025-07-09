@@ -5,26 +5,26 @@ const Reviews = () => {
 	return (
 		<section
 			id="Reviews"
-			className="w-full bg-[#FFFFF] py-24 px-5 flex flex-col items-center"
+			className="w-full bg-white py-12 sm:py-20 px-4 sm:px-6 flex flex-col items-center"
 		>
-			<h2 className="font-Mirza text-[64px] text-primary text-center mb-16">
+			<h2 className="font-Mirza text-primary text-center text-[36px] sm:text-[48px] md:text-[60px] mb-10 sm:mb-16">
 				Մեր հաճախորդների կարծիքները
 			</h2>
 
-			<div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 max-w-7xl w-full">
+			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl w-full">
 				{reviews.map((review, index) => (
 					<div
 						key={review.name}
-						className="bg-white border border-[#8A2BE2] rounded-2xl shadow-md p-8 flex flex-col justify-between transform transition duration-300 hover:scale-105 hover:shadow-xl"
+						className="bg-white border border-[#8A2BE2] rounded-2xl shadow-md p-6 sm:p-8 flex flex-col justify-between transform transition duration-300 hover:scale-105 hover:shadow-xl"
 						style={{
-							animation: `fadeInUp 0.5s ease ${index * 0.2}s both`,
+							animation: `fadeInUp 0.5s ease ${index * 0.15}s both`,
 						}}
 					>
-						<p className="text-primary font-Lora text-base leading-7 mb-6">
+						<p className="text-primary font-Lora text-[15px] sm:text-base leading-7 mb-5">
 							“{review.content}”
 						</p>
 						<div className="flex flex-col gap-2">
-							<div className="flex items-center gap-2 text-primary font-Lora font-semibold text-[16px]">
+							<div className="flex flex-wrap items-center gap-2 text-primary font-Lora font-semibold text-[14px] sm:text-[16px]">
 								<span>{review.name}</span>
 								<span>-</span>
 								<span>{review.date}</span>
